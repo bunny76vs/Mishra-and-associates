@@ -1,0 +1,243 @@
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f6f8;
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  line-height: 1.8;
+  font-size: 15px;
+
+}
+
+/* ================= ACCENT COLOR ================= */
+:root {
+  --accent-gold: #c9a227;
+}
+
+/* ================= HEADER ================= */
+.header {
+  background: #0f172a;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  position: relative;
+  font-family: "Playfair Display", serif;
+}
+
+.logo::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--accent-gold);
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+/* Desktop nav (HIDDEN EVERYWHERE for same look) */
+.nav-links {
+  display: none;
+}
+
+/* Hamburger (ALWAYS VISIBLE) */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  margin: 5px 0;
+  border-radius: 2px;
+}
+
+/* ================= MOBILE MENU ================= */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #0f172a;
+}
+
+.mobile-menu.show {
+  display: flex;
+}
+
+.mobile-menu a {
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #334155;
+  transition: padding-left 0.3s ease, background 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  padding-left: 30px;
+  background: #1e293b;
+  color: var(--accent-gold);
+}
+
+/* ================= SLIDER ================= */
+.slider {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* ================= OVERLAY ================= */
+.slider-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.slider-overlay h2 {
+  font-size: 42px;
+  font-family: "Playfair Display", serif;
+}
+
+.slider-overlay p {
+  font-size: 18px;
+}
+
+/* ================= HIGHLIGHTS ================= */
+.highlights {
+  max-width: 1100px;
+  margin: 60px auto 20px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.highlight-box {
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.highlight-box h3 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 6px;
+  font-family: "Playfair Display", serif;
+}
+
+.highlight-box p {
+  color: #e5e7eb;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+/* ================= CONTENT ================= */
+.content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;   /* SAME EVERYWHERE */
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.article,
+.sidebar {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.article h2,
+.article h3,
+.sidebar h3 {
+  font-family: "Playfair Display", serif;
+  color: #0f172a;
+  margin-bottom: 15px;
+}
+
+.article h3::after,
+.sidebar h3::after {
+  content: "";
+  width: 30px;
+  height: 3px;
+  background: var(--accent-gold);
+  display: block;
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+/* Quote */
+blockquote {
+  margin: 30px 0;
+  padding: 20px 25px;
+  background: #f9fafb;
+  border-left: 5px solid var(--accent-gold);
+  font-style: italic;
+  color: #374151;
+  border-radius: 4px;
+  font-family: "Playfair Display", serif;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+/* Contact links */
+.contact-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
