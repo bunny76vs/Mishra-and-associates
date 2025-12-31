@@ -29,11 +29,11 @@ body {
 }
 
 .container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 20px;
+  width: 100%;
+  padding: 15px;
 }
 
+/* Header layout (mobile) */
 .header-inner {
   display: flex;
   justify-content: space-between;
@@ -42,7 +42,7 @@ body {
 
 /* Logo */
 .logo {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   font-family: "Playfair Display", serif;
 }
@@ -62,7 +62,7 @@ body {
   display: none;
 }
 
-/* Hamburger */
+/* Hamburger always visible */
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -70,10 +70,10 @@ body {
 }
 
 .hamburger span {
-  width: 28px;
+  width: 26px;
   height: 3px;
   background: white;
-  margin: 5px 0;
+  margin: 4px 0;
   border-radius: 2px;
 }
 
@@ -93,19 +93,12 @@ body {
   color: white;
   text-decoration: none;
   border-bottom: 1px solid #334155;
-  transition: all 0.3s ease;
 }
 
-.mobile-menu a:hover {
-  padding-left: 30px;
-  background: #1e293b;
-  color: var(--accent-gold);
-}
-
-/* ================= SLIDER ================= */
+/* ================= SLIDER (MOBILE DEFAULT) ================= */
 .slider {
   position: relative;
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
 }
 
@@ -132,27 +125,26 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
   text-align: center;
   padding: 20px;
+  color: white;
 }
 
 .slider-overlay h2 {
-  font-size: 42px;
+  font-size: 26px;   /* MOBILE FIRST */
   font-family: "Playfair Display", serif;
 }
 
 .slider-overlay p {
-  font-size: 18px;
+  font-size: 15px;
 }
 
-/* ================= HIGHLIGHTS ================= */
+/* ================= HIGHLIGHTS (MOBILE FIRST) ================= */
 .highlights {
-  max-width: 1100px;
-  margin: 60px auto 20px;
-  padding: 0 20px;
+  margin: 30px auto 20px;
+  padding: 0 15px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
@@ -165,8 +157,7 @@ body {
 
 .highlight-box h3 {
   color: white;
-  font-size: 30px;
-  margin-bottom: 6px;
+  font-size: 26px;
   font-family: "Playfair Display", serif;
 }
 
@@ -175,12 +166,12 @@ body {
   font-size: 14px;
 }
 
-/* ================= CONTENT ================= */
+/* ================= CONTENT (MOBILE FIRST) ================= */
 .content {
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 30px;
-  margin-top: 40px;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 30px;
 }
 
 .article,
@@ -198,29 +189,6 @@ body {
   margin-bottom: 15px;
 }
 
-.article h3::after,
-.sidebar h3::after {
-  content: "";
-  width: 30px;
-  height: 3px;
-  background: var(--accent-gold);
-  display: block;
-  margin-top: 6px;
-  border-radius: 2px;
-}
-
-/* Quote */
-blockquote {
-  margin: 30px 0;
-  padding: 20px 25px;
-  background: #f9fafb;
-  border-left: 5px solid var(--accent-gold);
-  font-style: italic;
-  color: #374151;
-  border-radius: 4px;
-  font-family: "Playfair Display", serif;
-}
-
 /* ================= FOOTER ================= */
 .footer {
   background: #0f172a;
@@ -230,45 +198,37 @@ blockquote {
   margin-top: 40px;
 }
 
-.contact-link {
-  color: #2563eb;
-  text-decoration: none;
-  font-weight: 500;
-}
+/* ================================================= */
+/* ================= DESKTOP ENHANCEMENT ============ */
+/* ================================================= */
 
-.contact-link:hover {
-  text-decoration: underline;
-}
+@media (min-width: 1024px) {
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+  }
 
   .slider {
-    height: 80vh;
+    height: 100vh;
   }
 
   .slider-overlay h2 {
-    font-size: 26px;
+    font-size: 42px;
   }
 
   .slider-overlay p {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .highlights {
-    grid-template-columns: 1fr;
-    margin-top: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 60px auto 20px;
   }
 
   .content {
-    grid-template-columns: 1fr;
-  }
-
-  .sidebar {
-    margin-top: 20px;
-  }
-
-  .container {
-    padding: 15px;
+    grid-template-columns: 3fr 1fr;
+    gap: 30px;
   }
 }
