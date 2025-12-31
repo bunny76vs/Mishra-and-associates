@@ -11,7 +11,7 @@ body {
   font-family: "Inter", sans-serif;
   line-height: 1.8;
   font-size: 15px;
-
+  overflow-x: hidden;
 }
 
 /* ================= ACCENT COLOR ================= */
@@ -44,7 +44,6 @@ body {
 .logo {
   font-size: 22px;
   font-weight: bold;
-  position: relative;
   font-family: "Playfair Display", serif;
 }
 
@@ -58,12 +57,12 @@ body {
   border-radius: 2px;
 }
 
-/* Desktop nav (HIDDEN EVERYWHERE for same look) */
+/* Hide desktop nav */
 .nav-links {
   display: none;
 }
 
-/* Hamburger (ALWAYS VISIBLE) */
+/* Hamburger */
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -94,7 +93,7 @@ body {
   color: white;
   text-decoration: none;
   border-bottom: 1px solid #334155;
-  transition: padding-left 0.3s ease, background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .mobile-menu a:hover {
@@ -135,6 +134,7 @@ body {
   align-items: center;
   color: white;
   text-align: center;
+  padding: 20px;
 }
 
 .slider-overlay h2 {
@@ -173,13 +173,12 @@ body {
 .highlight-box p {
   color: #e5e7eb;
   font-size: 14px;
-  letter-spacing: 0.5px;
 }
 
 /* ================= CONTENT ================= */
 .content {
   display: grid;
-  grid-template-columns: 3fr 1fr;   /* SAME EVERYWHERE */
+  grid-template-columns: 3fr 1fr;
   gap: 30px;
   margin-top: 40px;
 }
@@ -230,7 +229,7 @@ blockquote {
   padding: 15px;
   margin-top: 40px;
 }
-/* Contact links */
+
 .contact-link {
   color: #2563eb;
   text-decoration: none;
@@ -241,3 +240,35 @@ blockquote {
   text-decoration: underline;
 }
 
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  .slider {
+    height: 80vh;
+  }
+
+  .slider-overlay h2 {
+    font-size: 26px;
+  }
+
+  .slider-overlay p {
+    font-size: 15px;
+  }
+
+  .highlights {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    margin-top: 20px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
