@@ -1,19 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  // =====================
-  // MOBILE NAVBAR
-  // =====================
+  /* =========================
+     MOBILE NAVBAR
+  ========================== */
+
   const hamburger = document.querySelector(".hamburger");
   const mobileMenu = document.getElementById("mobileMenu");
 
-  hamburger.addEventListener("click", () => {
-    mobileMenu.classList.toggle("show");
-  });
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener("click", () => {
+      mobileMenu.classList.toggle("show");
+    });
 
-  // =====================
-  // SLIDER (FIXED)
-  // =====================
-  const slides = document.querySelectorAll(".slides .slide");
+    // Close menu when link is clicked (mobile UX fix)
+    const menuLinks = mobileMenu.querySelectorAll("a");
+    menuLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("show");
+      });
+    });
+  }
+
+  /* =========================
+     SLIDER
+  ========================== */
+
+  const slides = document.querySelectorAll(".slide");
   let index = 0;
 
   if (slides.length > 0) {
@@ -25,26 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
       index = (index + 1) % slides.length;
       slides[index].classList.add("active");
     }, 3500);
-  }
-
-  // =====================
-  // HIGHLIGHT ANIMATION
-  // =====================
-  const highlightBoxes = document.querySelectorAll(".highlight-box");
-
-  if (highlightBoxes.length > 0) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    highlightBoxes.forEach(box => observer.observe(box));
   }
 
 });
