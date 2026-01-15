@@ -1,0 +1,195 @@
+/* ================= GLOBAL ================= */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: radial-gradient(circle at top,#0f172a,#020617);
+  color: white;
+}
+
+/* ================= TOP BAR ================= */
+.top-bar {
+  background: black;
+  padding: 25px 20px;
+  text-align: center;
+  border-bottom: 2px solid #c9a227;
+}
+
+.top-bar h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  color: #c9a227;
+  margin: 0;
+}
+
+.top-bar p {
+  color: #aaa;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* ================= HERO ================= */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  color: #c9a227;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #cbd5f5;
+  font-size: 18px;
+}
+
+/* ================= COURTS ================= */
+.courts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 25px;
+  padding: 40px 25px;
+}
+
+.court-card {
+  background: linear-gradient(135deg,#020617,#0f172a);
+  border: 1px solid rgba(201,162,39,.4);
+  border-radius: 18px;
+  padding: 35px 25px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(201,162,39,.2);
+  transition: .3s ease;
+}
+
+.court-card span {
+  font-size: 42px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.court-card h3 {
+  color: #c9a227;
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+}
+
+.court-card p {
+  color: #cbd5f5;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.court-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 60px rgba(201,162,39,.5);
+}
+
+.supreme {
+  border: 2px solid gold;
+  box-shadow: 0 0 80px rgba(255,215,0,.7);
+}
+
+/* ================= PRACTICE AREAS ================= */
+.practice-details {
+  text-align: center;
+  padding: 60px 30px;
+}
+
+.practice-details h2 {
+  font-family: "Playfair Display", serif;
+  color: #c9a227;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.area-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 20px;
+}
+
+.area-box {
+  border: 1px solid rgba(201,162,39,.4);
+  padding: 18px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.03);
+  color: #cbd5f5;
+  font-size: 16px;
+  transition: .3s;
+}
+
+.area-box:hover {
+  background: rgba(201,162,39,.2);
+  transform: translateY(-4px);
+}
+
+/* ================= EXPERIENCE ================= */
+.experience {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.experience h2 {
+  font-family: "Playfair Display", serif;
+  color: #c9a227;
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+.experience p {
+  color: #cbd5f5;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+/* ================= CTA ================= */
+.cta {
+  text-align: center;
+  padding: 70px 30px;
+  background: linear-gradient(120deg,#020617,#0f172a);
+  border-top: 2px solid #c9a227;
+}
+
+.cta h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  color: #c9a227;
+}
+
+.cta p {
+  color: #cbd5f5;
+  font-size: 18px;
+  margin: 15px 0 30px;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 14px 40px;
+  background: gold;
+  color: black;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.cta-btn:hover {
+  background: #ffd700;
+  transform: scale(1.05);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: black;
+  color: #c9a227;
+  font-size: 16px;
+}
